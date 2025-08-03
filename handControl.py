@@ -5,7 +5,7 @@ from Finger import Finger #Import the Finger class from the Finger file
 from Finger import width,height
 from Servo_Utils import Servo #Import the Servo class from Servo_Utils
 
-#THIS IS A TEST TEXT!!!!
+#THIS IS A TEST TEXT!!!!!
 
 indexPin = 8
 middlePin = 7
