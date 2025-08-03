@@ -3,7 +3,7 @@ A low-cost prosthetic hand that utilizes camera-based hand recognition and Ardui
 
 
 <div align="center">
-  <img height="200" src="https://imgur.com/a/bJkLmCJ"  />
+  <img height="200" src="https://imgur.com/gallery/prosthetic-hand-bJkLmCJ"  />
 </div>
 
 ###
