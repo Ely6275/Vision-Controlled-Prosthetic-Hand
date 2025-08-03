@@ -12,4 +12,5 @@ This project explores a low-cost approach to traditional prosthetics by using a 
 - **OpenCV** to access webcam and store frame information
 - **MediaPipe** for hand landmark recognition and accessing joint locations
 - **Arduino Uno** and 5 MG996R servo motors that are attached to fishing line threaded through each finger
+  - 3D-Model of the Prosthetic is open source retrieved from https://inmoov.fr/
 - **PyFirmata2** Library to communicate with the Arduino
