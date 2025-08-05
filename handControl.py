@@ -1,3 +1,5 @@
+#includes updated thumb functionalities
+
 import cv2
 import mediapipe as mp
 
