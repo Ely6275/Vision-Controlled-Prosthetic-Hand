@@ -5,8 +5,6 @@ from Finger import Finger #Import the Finger class from the Finger file
 from Finger import width,height
 from Servo_Utils import Servo #Import the Servo class from Servo_Utils
 
-#THIS IS A TEST TEXT!!!!!!!!!
-
 indexPin = 8
 middlePin = 7
 ringPin = 9
@@ -14,8 +12,14 @@ pinkyPin = 10
 thumbPin = 11
 
 def drawDistanceLines(frame, arr):
-    for i in range(len(arr)):
+    for i in range(1,len(arr)): #excludes the thumb
         cv2.line(frame, arr[i][0], arr[i][1], (0, 255, 0), 3)
+
+    #Draws a right triangle connecting the tip of the thumb to the base of the thumb
+    y1 = arr[0][0][1]
+    x2 = arr[0][1][0]
+    cv2.line(frame, arr[0][1], (x2, y1), (0, 255, 0), 3)
+    cv2.line(frame, arr[0][0], (x2, y1), (0, 255, 0), 3)
 
 indexServo = Servo(indexPin)
 middleServo = Servo(middlePin)
@@ -64,7 +68,7 @@ def main():
                 pinkyBase = handlandmarks.landmark[17]
 
                 #Create objects for each finger
-                thumb = Finger(thumbTip.x, thumbTip.y, thumbBase.x, thumbBase.y, thumbServo)
+                thumb = Finger(thumbTip.x, thumbTip.y, thumbBase.x, thumbBase.y, thumbServo, True)
                 index = Finger(indexTip.x, indexTip.y, indexBase.x, indexBase.y, indexServo)
                 middle = Finger(middleTip.x, middleTip.y, middleBase.x, middleBase.y, middleServo)
                 ring = Finger(ringTip.x, ringTip.y, ringBase.x, ringBase.y, ringServo)

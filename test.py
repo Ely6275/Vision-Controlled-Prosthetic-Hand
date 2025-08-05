@@ -9,7 +9,9 @@ import time
 
 width = 1280
 height = 720
+
 indexServo = Servo(8)
+thumbServo = Servo(11)
 
 
 cam = cv2.VideoCapture(0, cv2.CAP_DSHOW) #Capture frame and directly show it
@@ -40,8 +42,17 @@ while True:
             indexTip = handlandmarks.landmark[8]
             indexBase = handlandmarks.landmark[5]
 
+            thumbTip = handlandmarks.landmark[4]
+            thumbBase = handlandmarks.landmark[2]
+
             index = Finger(indexTip.x, indexTip.y, indexBase.x, indexBase.y, indexServo)
             d2 = index.calculateDistance()
+
+            thumb = Finger(thumbTip.x, thumbTip.y, thumbBase.x, thumbBase.y, thumbServo)
+            #d1 = thumb.calculateDistance()
+
+            thumbTipTuple = (int(thumbTip.x * width), int(thumbTip.y * height))
+            thumbBaseTuple = (int(thumbBase.x * width), int(thumbBase.y * height))
 
             if i==10:
                 initialDistance=d2
@@ -65,6 +76,12 @@ while True:
             cv2.line(frame, indexTipTuple, indexBaseTuple, (0, 255, 0), 3)
             cv2.line(frame, indexTipTuple, tipTuple_init, (255, 0, 0), 3)
             cv2.line(frame, indexBaseTuple, baseTuple_init, (255, 0, 0), 3)
+
+            y1 = thumbTipTuple[1]
+            x2 = thumbBaseTuple[0]
+
+            cv2.line(frame, thumbBaseTuple, (x2,y1), (255, 0, 0), 3)
+            cv2.line(frame, thumbTipTuple, (x2, y1), (255, 0, 0), 3)
 
             if (i <= 10 and d2 != 0): i = i + 1
             else: pass
