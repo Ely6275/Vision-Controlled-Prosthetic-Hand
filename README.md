@@ -3,11 +3,13 @@ A low-cost prosthetic hand that utilizes camera-based hand recognition and Ardui
 
 ![Hand](Hand.jpg)
 
-# Demonstration
-[![Side By Side Hand Demo](https://img.youtube.com/vi/b7CLX6D0mAc/0.jpg)](https://youtu.be/b7CLX6D0mAc)
+# Demonstrations
 
+Click the images below to view demos of the hand's functionality
 
-Click the image above to view a side by side demonstration of the vision software and hand movement
+[![Demo #1](https://img.youtube.com/vi/b7CLX6D0mAc/0.jpg)](https://youtu.be/b7CLX6D0mAc)
+
+[![Demo #2](https://img.youtube.com/vi/DjKZX3GeChw/0.jpg)](https://youtu.be/DjKZX3GeChw)
 
 
 
