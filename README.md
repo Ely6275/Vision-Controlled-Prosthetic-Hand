@@ -53,5 +53,19 @@ This project explores a low-cost approach to traditional prosthetics by using a 
   def write(self, angle):
         board.digital[self.pin].write(angle)
   ```
-  
+
+  ## Finger.py
+  This file defines a Finger object and methods that can be operated on each finger
+
+  Constructor that stores the xy coordinates of the tip and base of the finger, as well as the servo controlling the finger
+  - The isThumb parameter is a default parameter that simply indicates whether the finger is a thumb or not
+  ```python
+   def __init__(self, tipX, tipY, baseX, baseY, servo, isThumb=False):
+        self.tipX = tipX
+        self.tipY = tipY
+        self.baseX = baseX
+        self.baseY = baseY
+        self.servo = servo
+        self.isThumb = isThumb
+  ```
 
