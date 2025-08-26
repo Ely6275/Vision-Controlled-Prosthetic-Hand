@@ -43,8 +43,15 @@ This project explores a low-cost approach to traditional prosthetics by using a 
   ## Servo_Utils.py
   This file stores functionalities for the Servos and creates a Servo object with methods
 
-  Initialize and store board object that connects to one of my USB Serial ports
+  Initialize and store board object that connects to the USB Serial Port
   ```python
   board = pyfirmata2.Arduino("COM3")
+  ```
+
+  Writes the angle passed to the servo
+  ```
+  def write(self, angle):
+        board.digital[self.pin].write(angle)
+  ```
   
 
