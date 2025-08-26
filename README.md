@@ -31,3 +31,5 @@ This project explores a low-cost approach to traditional prosthetics by using a 
    In the demonstration, the green lines indicate the length from the tip to base of each finger, and the blue numbers at the top of each finger is the calculated distance
    
     $d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$
+3) Using each finger distance, I created a linear function to map the angle of each servo to distance
+   - After some adjustments, I found a multiplier of 40 allowed for a full range of finger motion 
