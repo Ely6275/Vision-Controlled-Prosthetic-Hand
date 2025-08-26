@@ -49,7 +49,7 @@ This project explores a low-cost approach to traditional prosthetics by using a 
   ```
 
   Writes the angle passed to the servo
-  ```
+  ```python
   def write(self, angle):
         board.digital[self.pin].write(angle)
   ```
