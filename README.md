@@ -40,4 +40,4 @@ This project explores a low-cost approach to traditional prosthetics by using a 
    - To detect this, use an if statement to check if the y coordinate of the tip is greater than the y coordinate of the base
   
 # File Breakdown
-  # Servo_Utils.py
+  ## Servo_Utils.py
