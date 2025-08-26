@@ -27,6 +27,7 @@ This project explores a low-cost approach to traditional prosthetics by using a 
 # Approach
 
 1) Using MediaPipe, I was able to access the xyz coordinates of each finger tip and finger base (the point that connects the finger to the hand)
-2) With these coordinates, use the distance formula to calculate the pixel distance between the tip and base of each finger
+2) With these coordinates, use the distance formula to calculate the pixel distance between the tip and base of each finger.
+   In the demonstration, the green lines indicate the length from the tip to base of each finger, and the blue numbers at the top of each finger is the calculated distance
    
     $d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$
