@@ -41,4 +41,4 @@ This project explores a low-cost approach to traditional prosthetics by using a 
   
 # File Breakdown
   ## Servo_Utils.py
-  ```board = pyfirmata2.Arduino("COM3")```
+  ```board = pyfirmata2.Arduino("COM3")
