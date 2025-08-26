@@ -41,6 +41,10 @@ This project explores a low-cost approach to traditional prosthetics by using a 
   
 # File Breakdown
   ## Servo_Utils.py
+  This file stores functionalities for the Servos and creates a Servo object with methods
+
+  Initialize and store board object that connects to one of my USB Serial ports
   ```python
-board = pyfirmata2.Arduino("COM3")
+  board = pyfirmata2.Arduino("COM3")
+  
 
