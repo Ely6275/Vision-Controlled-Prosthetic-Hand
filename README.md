@@ -25,3 +25,7 @@ This project explores a low-cost approach to traditional prosthetics by using a 
 - **PyFirmata2** Library to communicate with the Arduino
 
 # Approach
+
+1) Using MediaPipe, I was able to access the xyz coordinates of each finger tip and finger base (the point that connects the finger to the hand)
+2) With these coordinates, use the distance formula to calculate the pixel distance between the tip and base of each finger
+$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
