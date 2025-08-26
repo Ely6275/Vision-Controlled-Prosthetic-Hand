@@ -37,4 +37,7 @@ This project explores a low-cost approach to traditional prosthetics by using a 
      - Where theta is the servo angle and d is the measured finger length
     
 4) If the software recognizes that a finger tip reaches below its base landmark, that means the finger is closed and the servo should be written to its max value of 180
-   - To detect this, use an if statement to check if the y coordinate of the tip is greater than the y coordinate of the base 
+   - To detect this, use an if statement to check if the y coordinate of the tip is greater than the y coordinate of the base
+  
+# File Breakdown
+  # Servo_Utils.py
