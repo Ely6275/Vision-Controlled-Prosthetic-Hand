@@ -32,4 +32,6 @@ This project explores a low-cost approach to traditional prosthetics by using a 
    
     $d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$
 3) Using each finger distance, I created a linear function to map the angle of each servo to distance
-   - After some adjustments, I found a multiplier of 40 allowed for a full range of finger motion 
+   - After some adjustments, I found a multiplier of 40 allowed for a full range of finger motion
+   - $\theta = 40d$
+     - Where theta is the servo angle and d is the measured finger length
