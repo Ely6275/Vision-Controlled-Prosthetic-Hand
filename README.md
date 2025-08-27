@@ -86,7 +86,7 @@ This project explores a low-cost approach to traditional prosthetics by using a 
   pinkyServo = Servo(pinkyPin)
   thumbServo = Servo(thumbPin)
   ```
-  The drawDistanceLines function draws 5 green connecting lines from the tip to base of each finger, excluding the thumb. For the thumb, this function draws a       right triangle using the base and tip coordinates 
+  The drawDistanceLines function draws 5 green connecting lines from the tip to base of each finger, excluding the thumb. For the thumb, this function draws a       right triangle using the base and tip coordinates of the thumb (x2 and y1)
   
   - Parameters
     - frame: the current frame captured by the camera
