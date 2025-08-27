@@ -69,3 +69,38 @@ This project explores a low-cost approach to traditional prosthetics by using a 
         self.isThumb = isThumb
   ```
 
+  ## handControl.py
+  This is the main file that runs all functionalities of the hand
+
+  Initialize each servo to a pin on the Arduino, then create servo objects using the corresponding pin. This allows me to perform methods on each finger.
+  ```python
+  indexPin = 8
+  middlePin = 7
+  ringPin = 9
+  pinkyPin = 10
+  thumbPin = 11
+  
+  indexServo = Servo(indexPin)
+  middleServo = Servo(middlePin)
+  ringServo = Servo(ringPin)
+  pinkyServo = Servo(pinkyPin)
+  thumbServo = Servo(thumbPin)
+  ```
+  The drawDistanceLines function draws 5 green connecting lines from the tip to base of each finger, excluding the thumb. For the thumb, this function draws a       right triangle using the base and tip coordinates 
+  
+  - Parameters
+    - frame: the current frame captured by the camera
+    - arr: a list of tuples that store xyz coordinates of each finger
+  
+  ```python
+  def drawDistanceLines(frame, arr):
+    for i in range(1,len(arr)): #excludes the thumb
+        cv2.line(frame, arr[i][0], arr[i][1], (0, 255, 0), 3)
+
+    #Draws a right triangle connecting the tip of the thumb to the base of the thumb
+    y1 = arr[0][0][1]
+    x2 = arr[0][1][0]
+    cv2.line(frame, arr[0][1], (x2, y1), (0, 255, 0), 3)
+    cv2.line(frame, arr[0][0], (x2, y1), (0, 255, 0), 3)
+  ```
+
