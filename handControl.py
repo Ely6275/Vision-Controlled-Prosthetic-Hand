@@ -13,6 +13,12 @@ ringPin = 9
 pinkyPin = 10
 thumbPin = 11
 
+indexServo = Servo(indexPin)
+middleServo = Servo(middlePin)
+ringServo = Servo(ringPin)
+pinkyServo = Servo(pinkyPin)
+thumbServo = Servo(thumbPin)
+
 def drawDistanceLines(frame, arr):
     for i in range(1,len(arr)): #excludes the thumb
         cv2.line(frame, arr[i][0], arr[i][1], (0, 255, 0), 3)
@@ -22,12 +28,6 @@ def drawDistanceLines(frame, arr):
     x2 = arr[0][1][0]
     cv2.line(frame, arr[0][1], (x2, y1), (0, 255, 0), 3)
     cv2.line(frame, arr[0][0], (x2, y1), (0, 255, 0), 3)
-
-indexServo = Servo(indexPin)
-middleServo = Servo(middlePin)
-ringServo = Servo(ringPin)
-pinkyServo = Servo(pinkyPin)
-thumbServo = Servo(thumbPin)
 
 cam = cv2.VideoCapture(0, cv2.CAP_DSHOW) #Capture frame and directly show it
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, width) #Set cam width
