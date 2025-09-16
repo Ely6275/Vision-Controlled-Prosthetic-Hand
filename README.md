@@ -108,6 +108,5 @@ This project explores a low-cost approach to traditional prosthetics by using a 
 Looking ahead, I aim to integrate computer vision with neural-muscular signals to better mimic arm movement. With EMG sensors, I can record signals from the arm/hand muscles as numerical dataand train machine learning models recognize the patterns that correspond to specific arm and hand movements. The prosthetic will be able to predict the movement of the user and actuate accordingly, enabling more natural control.  
 
 In future prototypes, I will address these main concerns:
-- Adjusting the servo angle functions to work for different hand sizes (smaller/longer fingers will yield different results when measuring tip-to-base distances)
-- Depth perception (Stereo Vision): the servo angle functions will change depending on how far away your hand is from the camera due to camera perspective
-  - For example, moving your hand away from the camera will decrease the calculated tip-to-base distance for each finger, even if they are still open.
+- Servo angle functions need to be adaptable, since different finger lengths (shorter or longer fingers) produce different tip-to-base distance measurements.
+- Depth perception (Stereo Vision): With only a single camera, the tip-to-base distances for each finger changes as the hand moves closer or farther from the lens. For example, moving the hand away reduces the measured distance even if the fingers remain fully open. Incorporating stereo vision will help correct for this perspective effect.
