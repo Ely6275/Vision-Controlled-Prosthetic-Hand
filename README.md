@@ -104,3 +104,6 @@ This project explores a low-cost approach to traditional prosthetics by using a 
     cv2.line(frame, arr[0][0], (x2, y1), (0, 255, 0), 3)
   ```
 
+# What's Next?
+Looking ahead, I aim to integrate computer vision with neural-muscular signals to better mimic arm movement. With EMG sensors, I can record signals from the arm/hand muscles as numerical dataand train machine learning models recognize the patterns that correspond to specific arm and hand movements. The prosthetic will be able to predict the movement of the user and actuate accordingly, enabling more natural control.  
+
